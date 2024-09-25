@@ -107,12 +107,13 @@ export async function GET() {
   //     "Uncomment this file and remove this line. You can delete this file when you are finished.",
   // });
   try {
-    await client.sql`BEGIN`;
-    await seedUsers();
-    await seedCustomers();
-    await seedInvoices();
-    await seedRevenue();
-    await client.sql`COMMIT`;
+    // seed已用完不进行操作，注释保留后续学习
+    // await client.sql`BEGIN`;
+    // await seedUsers();
+    // await seedCustomers();
+    // await seedInvoices();
+    // await seedRevenue();
+    // await client.sql`COMMIT`;
 
     return Response.json({ message: "Database seeded successfully" });
   } catch (error) {
